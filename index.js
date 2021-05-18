@@ -39,6 +39,8 @@ try {
           break;
       }
     });
+  } else {
+    console.log('No package.json detected, nothing to scan.')
   }
 } catch (error) {
   core.setFailed(error.message);
