@@ -508,7 +508,10 @@ try {
       }
     });
   } else {
-    console.log('No package.json detected, nothing to scan.')
+    console.log('No package.json detected, nothing to scan.');
+    fs.readdir('.', (err, files) => {
+      console.log(`files: ${files}`);
+    });
   }
 } catch (error) {
   core.setFailed(error.message);
