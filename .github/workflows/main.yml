@@ -1,15 +1,13 @@
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  hello_world_job:
+  npm_audit_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to scan for NPM vulnerabilities
     steps:
-      - name: Hello world action step
-        id: hello
+      - uses: actions/checkout@v2
+      - name: npm audit
+        id: audit
         uses: nmcginn/npm-audit-gh-action@v1.0
         with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          fail-on: 'high'

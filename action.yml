@@ -1,13 +1,10 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'npm audit'
+description: 'Automatically fail builds with high severity vulnerabilities'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  fail-on:
+    description: 'Severity to fail on'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+    default: 'high'
 runs:
   using: 'node12'
   main: 'dist/index.js'
