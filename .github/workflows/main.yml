@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: nmcginn/npm-audit-gh-actions@v1.0
+        uses: nmcginn/npm-audit-gh-action@v1.0
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
