@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to scan for NPM vulnerabilities
     steps:
+      - uses: actions/checkout@v2
       - name: npm audit
         id: audit
         uses: nmcginn/npm-audit-gh-action@v1.0

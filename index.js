@@ -41,7 +41,7 @@ try {
     });
   } else {
     console.log('No package.json detected, nothing to scan.');
-    fs.readdirSync('.', (err, files) => {
+    fs.readdir('.', (err, files) => {
       console.log(`files: ${files}`);
     });
   }
