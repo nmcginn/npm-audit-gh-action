@@ -1,8 +1,6 @@
 on:
   push:
   pull_request:
-  schedule:
-    - cron: '15 * * * *'
 jobs:
   npm_audit_job:
     runs-on: ubuntu-latest
