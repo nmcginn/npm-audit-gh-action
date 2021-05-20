@@ -3,7 +3,7 @@ on:
   pull_request:
 jobs:
   npm_audit_job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     name: A job to scan for NPM vulnerabilities
     steps:
       - uses: actions/checkout@v2
